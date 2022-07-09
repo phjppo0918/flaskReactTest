@@ -1,17 +1,17 @@
+import flask_cors
 from flask import Flask
+from routes import *
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 
-class kk :
-    def __init__(self, first, second):
-        self.first = first
-        self.second = second
 
-@app.route('/')
-def hello_world():
-    a = kk(2,4)# put application's code here
-    return a
 
+# app.register_blueprint(imageController, url_prefix='/image')
+app.register_blueprint(routes)
+
+flask_cors.CORS(app, expose_headers='Authorization')
 
 if __name__ == '__main__':
     app.run()
+

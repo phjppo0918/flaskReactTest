@@ -1,0 +1,3 @@
+AWS_ACCESS_KEY_ID = "asdf"
+AWS_SECRET_ACCESS_KEY = "qwer"
+BUCKET_NAME = "zxcv"
