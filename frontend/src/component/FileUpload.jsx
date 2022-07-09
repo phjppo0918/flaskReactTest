@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from "axios";
 
 class FileUpload extends React.Component {
     constructor(props) {
@@ -17,17 +18,11 @@ class FileUpload extends React.Component {
         const data = new FormData();
         data.append('file', this.uploadInput.files[0]);
         data.append('filename', this.fileName.value);
-    
-        fetch('http://127.0.0.1:5000/image', {
-          method: 'POST',
-          body: data,
-        }).then((response) => {
-            console.log(response);
-    
-          //response.json().then((body) => {
-          //  this.setState({ imageURL: `http://127.0.0.1:5000/${body.file}` });
-         // });
-        });
+        axios({
+            method: "post",
+            url:"/image",
+            data: data
+        }).then((res) => {});
       }
     
       render() {

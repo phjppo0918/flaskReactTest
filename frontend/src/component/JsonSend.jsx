@@ -4,13 +4,14 @@ import axios from "axios";
 class JsonSend extends React.Component {
     constructor(props) {
         super(props);
-        this.postJson = this.postJson.bind(this);
+        this.getImage = this.getImage.bind(this);
     }
-    postJson = () => {
+
+    getImage = () => {
         axios.post("/json",{aa:"1234", bb:234})
     }
     componentDidMount() {
-        this.postJson();
+        this.getImage();
     }
 
     render() {
