@@ -1,7 +1,7 @@
 from flask import render_template
 from . import routes
 from flask import jsonify
-from flask import make_response
+from flask import make_response, request
 
 class Test:
     def __init__(self):
@@ -24,5 +24,11 @@ def getJsonHeader():
                          201)
     resp.headers['Content-Type'] = 'application/json'
 
-
     return resp
+
+@routes.route('/json', methods=['post'])
+def postJson():
+    params = request.get_json()
+    print(params['aa'])
+    print(params)
+    return 'ok'

@@ -4,21 +4,21 @@ import axios from "axios";
 class JsonGet extends React.Component {
     constructor(props) {
         super(props);
-        this.getStudy = this.getStudy.bind(this);
+        this.getJson = this.getJson.bind(this);
     }
-    getStudy = () => {
+    getJson = () => {
         axios.get("/json").then(res => {
             console.log(res.data);
         });
     }
     componentDidMount() {
-        this.getStudy();
+        this.getJson();
     }
 
     render() {
-        return <h1>send to Console</h1>
+        return <h1>get to Console</h1>
     }
-    
+
 
 }
 
