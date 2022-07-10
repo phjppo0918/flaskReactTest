@@ -1,7 +1,7 @@
 from io import BytesIO
 
 from . import routes
-from flask import request, make_response, send_file
+from flask import request, send_file
 import logging
 
 from config.connection import s3_connection
