@@ -10,7 +10,11 @@ ENV REACT_APP_HOST_IP_ADDRESS $API_URL
 ENV REACT_APP_BACKEND_URL $REACT_APP_BACKEND_URL
 
 RUN yarn --ignore-platform
-COPY . ./
 
+RUN mkdir -p /node_modules
+COPY ./node_modules /frontend/node_modules
+
+
+COPY . ./
 # build file을 개발용에서는 불러오지 않기 때문에 개발용에서는 npm start 가능
 RUN yarn run build
