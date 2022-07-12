@@ -6,6 +6,7 @@ from test_celery.celery import test_hello
 def getRabbitMQ():
     a = 5
     while a > 0:
-        test_hello.delay()
+        test_hello.apply_async()
+
         a = a-1
     return 'ok'

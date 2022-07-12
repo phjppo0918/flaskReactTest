@@ -11,7 +11,6 @@ ENV REACT_APP_BACKEND_URL $REACT_APP_BACKEND_URL
 
 RUN yarn --ignore-platform
 
-RUN mkdir -p /node_modules
 COPY ./node_modules /frontend/node_modules
 
 

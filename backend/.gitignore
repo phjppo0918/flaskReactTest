@@ -446,4 +446,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+/config/rdsConfig.py
+/config/s3Config.py
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,python,flask,pycharm,visualstudiocode
